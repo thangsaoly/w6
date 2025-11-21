@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 20px; /* Added padding for mobile */
+}
+
+.container{
+    background-color: #dddddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    width: 90vw; /* Changed from fixed width to percentage */
+    max-width: 1200px; /* Maximum width for large screens */
+    min-width: 300px; /* Minimum width for very small screens */
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.content-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px; 
+    background-color: #eeeeee;
+    padding: 20px;
+    width: 100%;
+}
+
+.box {
+    padding: 10px 0; 
+}
+
+.c, .l {
+    grid-column: 1 / -1; 
+}
+
+.a, .b, .d, .e, .f, .g, .h{
+    width: 100%;
+}
+
+.c input, .l textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.l textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.btn{
+    display: flex;
+    justify-self: end;
+    margin-right: 5%;
+    color: white;
+    background-color: blue;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.footer{
+    padding: 20px;
+    width: 100%;
+}
+
+.content-container input:not([type="checkbox"]):not([type="radio"]),
+.content-container select,
+.content-container textarea {
+    width: 100%;
+    padding: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .content-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    .container {
+        width: 95vw;
+    }
+    
+    body {
+        padding: 10px;
+        align-items: flex-start;
+        min-height: 100vh;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .header, .footer {
+        padding: 15px;
+    }
+    
+    .content-container {
+        padding: 10px;
+    }
+    
+    .btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
