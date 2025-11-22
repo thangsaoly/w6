@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media</title>
+    <style>
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .small {
+            display: inline;
+            background-color: lightcoral;
+            
+        }
+
+        .big {
+            display: none;
+            background-color: limegreen;
+        }
+
+        @media (min-width: 768px) {
+            .big {
+                display: flex;
+            }
+
+            .small {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <span class="small">I'm SMALL 😊</span>
+            <span class="big">I'm BIG 😃</span>
+        </div>
+    </div>
+</body>
+
+</html>

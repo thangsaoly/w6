@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navBar {
+            background-color: lightblue;
+            height: 4rem;
+            width: 100vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px 0 50px;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 80px;
+
+        }
+
+        ul li a {
+            text-decoration: none;
+        }
+
+        .hamberger-menu {
+            display: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+            .hamberger-menu {
+                display: inline;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navBar">
+        <div class="logo">
+            <img src="messi_pic.jpg" alt="Logo" width="50">
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contatct</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </div>
+        <div class="hamberger-menu">&#9776;</div>
+    </div>
+</body>
+
+</html>
